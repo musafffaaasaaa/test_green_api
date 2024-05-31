@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREEN-API Demo</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Демонстрация </h1>
+
+        <div class="input-fields">
+            <h2>Отправить запрос</h2>
+            <form action="/sendRequest" method="POST">
+                <label for="idInstance">ID Инстанса:</label>
+                <input type="text" id="idInstance" placeholder="7103932799" name="idInstance" required>
+                <label for="apiTokenInstance">API Токен Инстанса:</label>
+                <input type="text" id="apiTokenInstance"
+                    placeholder="dc12936486c044dfae742ed15d72e5316e2d347de3ea4e74aa" name="apiTokenInstance" required>
+                <label for="chatId">Номер WhatsApp (если применимо):</label>
+                <input type="text" id="phone" placeholder="7(707)777-77-77" name="phone">
+                <label for="message">Сообщение (если применимо):</label>
+                <input type="text" id="message" name="message">
+                <label for="urlFile">URL файла (если применимо):</label>
+                <input type="text" id="urlFile" name="urlFile" placeholder="Enter file URL" required><br><br>
+                <label for="fileName">File Name:</label><br>
+                <input type="text" id="fileName" name="fileName" placeholder="Enter file name" required><br><br>
+            </form>
+        </div>
+
+        <div class="buttons">
+            <button id="getSettingsButton">getSettings</button>
+            <button id="getStateInstanceButton">getStateInstance</button>
+            <button id="sendMessageButton">sendMessage</button>
+            <button id="sendFileByUrlButton">sendFileByUrl</button>
+        </div>
+        <label for="idMessage">ID сообщения для просмотра ответа сервера:</label>
+        <div class="response-field">
+            <pre id="response"></pre>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
